@@ -12,7 +12,7 @@
   <img src="https://a3-qualidade-software.s3.amazonaws.com/print-relatorio-jacoco.PNG">
 </div>
 
-<p>Após o cógigo ser rodado via Coverage com saída JaCoCo, a cobertura de testes apresentou superior a 30%, portanto não foi necessário adionar mais testes. Obs: O coverage foi usado na IDE IntelliJ.</p>
+<p>Após o código ser rodado via Coverage com saída JaCoCo, a cobertura de testes apresentou superior a 30%, portanto não foi necessário adionar mais testes. Obs: O coverage foi usado na IDE IntelliJ.</p>
 
 <p>Segue link com o relatório do Coverage JaCoCo zipado:</p>
 
