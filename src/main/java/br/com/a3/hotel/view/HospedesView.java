@@ -7,7 +7,17 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.Objects;
 
+/**
+ * A classe HospedesView contém métodos relacionados à interação com os hóspedes.
+ */
+
 public class  HospedesView {
+
+        /**
+     * Exibe o menu de opções para Hóspedes.
+     *
+     * @return Um número inteiro correspondente à escolha do usuário.
+     */
 
     public static int menuHospede(){
         int resposta = Integer.parseInt(JOptionPane.showInputDialog(null, "Menu Hospede: \n" +
@@ -19,7 +29,11 @@ public class  HospedesView {
         return resposta;
     }
 
-
+    /**
+     * Coleta informações para cadastrar um novo hóspede.
+     *
+     * @return Um objeto HospedesModel com os dados do novo hóspede.
+     */
     public HospedesModel cadastrarNovoHospede() {
         String nome = JOptionPane.showInputDialog(null, "Primeiro Nome:");
         String sobrenome = JOptionPane.showInputDialog(null, "Sobrenome:");
@@ -35,7 +49,11 @@ public class  HospedesView {
 
         return new HospedesModel(nome, sobrenome, data_nascimento, cpf, genero, endereco, telefone, email);
     }
-
+    /**
+     * Exibe o menu de opções para deletar um hóspede.
+     *
+     * @return Um número inteiro correspondente à escolha do usuário.
+     */
     public static int menuDeletarHospede(){
         try {
             int resposta = Integer.parseInt(JOptionPane.showInputDialog(null, "Menu Deletar Hospede:\n\n" +
@@ -47,7 +65,11 @@ public class  HospedesView {
             return 3; // Em caso de exception, voltar para tela anterior.
         }
     }
-
+    /**
+     * Mostra a lista de hóspedes em uma caixa de diálogo.
+     *
+     * @param listaHospedes Lista de objetos HospedesModel a serem exibidos.
+     */
     public static void mostrarListaHospedes(java.util.List<HospedesModel> listaHospedes) {
         // Criando um JTextArea para exibir os dados
         JTextArea textArea = new JTextArea();
@@ -80,7 +102,11 @@ public class  HospedesView {
         // Exibindo a caixa de diálogo com a barra de rolagem
         JOptionPane.showMessageDialog(null, scrollPane, "Lista de Hóspedes", JOptionPane.PLAIN_MESSAGE);
     }
-
+    /**
+     * Mostra uma caixa de diálogo para inserir o CPF do hóspede a ser deletado.
+     *
+     * @return O CPF do hóspede a ser deletado.
+     */
     public static String mostrarTelaDeletarHospede(){
         String cpfHospede = JOptionPane.showInputDialog(null, "Deletar Hospede:\n\nDigite o CPF do Hospede a ser deletado:");
         return cpfHospede;
