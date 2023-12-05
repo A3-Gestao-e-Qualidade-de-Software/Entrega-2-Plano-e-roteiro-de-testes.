@@ -1,5 +1,9 @@
 package br.com.a3.hotel.model;
 
+/**
+ * Representa as informações de um quarto do hotel.
+ */
+
 public class QuartoModel {
     private int ID_Quarto;
     private int Num_Quarto;
@@ -8,6 +12,19 @@ public class QuartoModel {
     private double Preco_Noite;
     private String Status_Ocupacao;
     private String Descricao;
+
+    /**
+     * Construtor da classe QuartoModel.
+     *
+     * @param ID_Quarto       Identificador único do quarto.
+     * @param num_Quarto      Número do quarto.
+     * @param andar_Quarto    Andar onde o quarto está localizado.
+     * @param tipo_Quarto     Tipo do quarto.
+     * @param preco_Noite     Preço por noite do quarto.
+     * @param status_Ocupacao Status de ocupação do quarto.
+     * @param descricao       Descrição do quarto.
+     */
+    
     public QuartoModel(int ID_Quarto, int num_Quarto, int andar_Quarto, String tipo_Quarto, double preco_Noite, String status_Ocupacao, String descricao) {
         this.ID_Quarto = ID_Quarto;
         Num_Quarto = num_Quarto;
