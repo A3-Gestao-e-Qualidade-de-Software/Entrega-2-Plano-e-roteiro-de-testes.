@@ -9,6 +9,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Classe responsável por operações relacionadas aos usuários no banco de dados.
+ */
+
 public class UsuarioDAO {
     private Connection conn;
 
@@ -16,6 +20,15 @@ public class UsuarioDAO {
         this.conn = conn;
     }
 
+    /**
+     * Cadastra um novo usuário no banco de dados.
+     *
+     * @param objUsuarioModel O objeto UsuarioModel contendo as informações do usuário a ser cadastrado.
+     * @return true se o cadastro for bem-sucedido, false caso contrário.
+     * @throws SQLException             Se ocorrer um erro durante a execução da operação no banco de dados.
+     * @throws ClassNotFoundException Se o driver JDBC não puder ser carregado.
+     */
+    
     public boolean cadastrarUsuario(UsuarioModel objUsuarioModel) throws SQLException, ClassNotFoundException {
         new ConexaoDAO();
         conn = ConexaoDAO.conectaBD();
@@ -41,6 +54,15 @@ public class UsuarioDAO {
     }
 
 
+    /**
+     * Autentica um usuário no sistema.
+     *
+     * @param objUsuarioModel O objeto UsuarioModel contendo as informações do usuário para autenticação.
+     * @return Um ResultSet com os dados do usuário autenticado.
+     * @throws SQLException             Se ocorrer um erro durante a execução da operação no banco de dados.
+     * @throws ClassNotFoundException Se o driver JDBC não puder ser carregado.
+     */
+    
     public ResultSet autenticarUsuario(UsuarioModel objUsuarioModel) throws SQLException, ClassNotFoundException {
         new ConexaoDAO();
         conn = ConexaoDAO.conectaBD();
