@@ -16,7 +16,16 @@ import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.List;
 
+
+/**
+ * A classe ReservasView contém métodos relacionados à exibição e interação com reservas.
+ */
 public class ReservasView {
+        /**
+     * Exibe um menu de opções relacionadas às reservas.
+     *
+     * @return O número da opção selecionada pelo usuário.
+     */
     public static int mostrarMenuReservas(){
         int resposta = Integer.parseInt(JOptionPane.showInputDialog(null, "Menu Hospede: \n" +
                 "[1] Nova Reserva\n" +
@@ -26,7 +35,13 @@ public class ReservasView {
                 "[5] Voltar"));
         return resposta;
     }
-
+    /**
+     * Permite cadastrar uma nova reserva no sistema.
+     *
+     * @return O objeto ReservasModel com os detalhes da nova reserva.
+     * @throws SQLException            Exceção relacionada a problemas com a base de dados.
+     * @throws ClassNotFoundException Exceção relacionada a problemas ao carregar classes.
+     */
     public static ReservasModel cadastrarNovaReserva() throws SQLException, ClassNotFoundException {
         int ID = 0;
         // Listando Hospedes e solicitando CPF do Hospede a efetuar reserva:
@@ -68,6 +83,12 @@ public class ReservasView {
 
     // Retorna a data no padrão yyyy-mm-dd para tornar possível a comparação
     // dos quartos disponíveis na Query SQL em QuartosDAO:
+        /**
+     * Padroniza uma string de data para o formato yyyy-MM-dd.
+     *
+     * @param data A string de data a ser padronizada (formato dd/MM/yyyy).
+     * @return A data padronizada no formato yyyy-MM-dd.
+     */
     public static String padronizarDataString(String data){
         SimpleDateFormat inputFormat = new SimpleDateFormat("dd/MM/yyyy");
         SimpleDateFormat outputFormat = new SimpleDateFormat("yyyy-MM-dd");
