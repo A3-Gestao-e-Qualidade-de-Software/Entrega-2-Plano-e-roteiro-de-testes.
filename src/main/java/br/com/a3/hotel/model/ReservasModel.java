@@ -10,6 +10,19 @@ public class ReservasModel {
     private int ID_Status_Reserva;
     private int Status_Ativa;
 
+    /**
+     * Construtor da classe ReservasModel.
+     *
+     * @param id               Identificador único da reserva.
+     * @param ID_Hospede      ID do hóspede associado à reserva.
+     * @param ID_Quarto       ID do quarto associado à reserva.
+     * @param data_checkIN     Data de check-in da reserva.
+     * @param data_checkOUT    Data de check-out da reserva.
+     * @param data_Reserva     Data de criação da reserva.
+     * @param ID_Status_Reserva ID do status da reserva.
+     * @param status_Ativa     Status de ativação da reserva.
+     */
+    
     public ReservasModel(int id, int ID_Hospede, int ID_Quarto, String data_checkIN, String data_checkOUT, String data_Reserva, int ID_Status_Reserva, int status_Ativa) {
         this.id = id;
         this.ID_Hospede = ID_Hospede;
