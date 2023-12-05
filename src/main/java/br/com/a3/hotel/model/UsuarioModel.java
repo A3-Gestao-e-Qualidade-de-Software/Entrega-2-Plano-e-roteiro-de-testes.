@@ -1,11 +1,18 @@
 package br.com.a3.hotel.model;
-
+/**
+ * Representa um usuário do sistema do hotel.
+ */
 public class UsuarioModel {
     private String nomeUsuario;
     private String funcional;
     private String senhaUsuario; 
-
-    //  Constructor
+    /**
+     * Construtor da classe UsuarioModel.
+     *
+     * @param nomeUsuario   Nome do usuário.
+     * @param funcional     Funcional do usuário.
+     * @param senhaUsuario  Senha do usuário.
+     */
     public UsuarioModel(String nomeUsuario, String funcional, String senhaUsuario) {
         this.nomeUsuario = nomeUsuario;
         this.funcional = funcional;
