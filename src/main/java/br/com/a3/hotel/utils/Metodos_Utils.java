@@ -4,9 +4,15 @@ import javax.swing.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
+/**
+ * Classe Metodos_Utils contendo métodos utilitários para operações comuns.
+ */
 public class Metodos_Utils {
-
+    /**
+     * Solicita ao usuário uma data de nascimento no formato dd/MM/yyyy.
+     *
+     * @return Uma string formatada da data de nascimento.
+     */
     public String solicitarData() {
         Date data_nascimento;
         SimpleDateFormat dateFormat;
@@ -48,7 +54,11 @@ public class Metodos_Utils {
     private boolean isValidDateFormat(String dateStr) {
         return dateStr.matches("^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\\d{4}$");
     }
-
+    /**
+     * Solicita ao usuário uma data de check-in no formato dd/MM/yyyy.
+     *
+     * @return Uma string formatada da data de check-in.
+     */
     public String solicitarDataCheckIn() {
         Date data_nascimento;
         SimpleDateFormat dateFormat;
@@ -87,7 +97,11 @@ public class Metodos_Utils {
 
     }
 
-
+    /**
+     * Solicita ao usuário uma data de check-out no formato dd/MM/yyyy.
+     *
+     * @return Uma string formatada da data de check-out.
+     */
     public String solicitarDataCheckOut() {
         Date data_nascimento;
         SimpleDateFormat dateFormat;
@@ -126,7 +140,11 @@ public class Metodos_Utils {
 
     }
 
-
+    /**
+     * Solicita ao usuário selecionar o gênero entre "M" (masculino) e "F" (feminino).
+     *
+     * @return Uma string representando o gênero selecionado.
+     */
 
     public String selecionarGenero() {
         String[] opcoes = {"M", "F"};
