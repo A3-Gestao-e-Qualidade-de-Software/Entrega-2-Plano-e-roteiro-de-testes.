@@ -11,8 +11,18 @@ public class HospedesModel{
     private String endereco;
     private String telefone;
     private String email;
-
-    //  Constructor
+   /**
+     * Construtor da classe HospedesModel que recebe todas as informações do hóspede.
+     *
+     * @param nome         Nome do hóspede.
+     * @param sobrenome    Sobrenome do hóspede.
+     * @param dtNascimento Data de nascimento do hóspede no formato DD/MM/AAAA.
+     * @param cpf          CPF do hóspede.
+     * @param genero       Gênero do hóspede (Masculino/Feminino/Outro).
+     * @param endereco     Endereço do hóspede.
+     * @param telefone     Número de telefone do hóspede.
+     * @param email        Endereço de e-mail do hóspede.
+     */
     public HospedesModel(String nome, String sobrenome, String dtNascimento, String cpf, String genero, String endereco, String telefone, String email) {
         this.nome = nome;
         this.sobrenome = sobrenome;
